@@ -1,0 +1,71 @@
+{
+  "name": "tw-clsx",
+  "version": "0.0.0",
+  "description": "tailwindcss clsx",
+  "type": "module",
+  "keywords": [
+    "tailwindcss",
+    "clsx"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hemengke1997/tw-clsx.git"
+  },
+  "author": "hemengke <https://github.com/hemengke1997>",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "build:pages": "npm run build && cd playground/spa && npm run build",
+    "commitlint": "commitlint --edit",
+    "prepare": "simple-git-hooks",
+    "lint": "eslint .",
+    "up": "taze -I -w -r",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "bump": "bumpp package.json -c -p -t --all -x \"npm run changelog\""
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.3.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@minko-fe/commitlint-config": "^2.0.7",
+    "@minko-fe/eslint-config": "^3.2.0",
+    "@minko-fe/prettier-config": "^2.2.2",
+    "@minko-fe/tsconfig": "^2.1.0",
+    "bumpp": "^9.4.1",
+    "conventional-changelog-cli": "^5.0.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "npm-run-all": "^4.1.5",
+    "simple-git-hooks": "^2.11.1",
+    "taze": "^0.13.8",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.2",
+    "vite": "^5.3.1"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npm run commitlint",
+    "pre-commit": "npm run lint"
+  },
+  "commitlint": {
+    "extends": [
+      "@minko-fe/commitlint-config"
+    ]
+  },
+  "prettier": "@minko-fe/prettier-config"
+}
