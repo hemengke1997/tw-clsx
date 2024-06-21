@@ -1,6 +1,6 @@
 {
   "name": "tw-clsx",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "tailwindcss clsx",
   "type": "module",
   "keywords": [
@@ -29,13 +29,12 @@
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
-    "build:pages": "npm run build && cd playground/spa && npm run build",
     "commitlint": "commitlint --edit",
     "prepare": "simple-git-hooks",
     "lint": "eslint .",
     "up": "taze -I -w -r",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "bump": "bumpp package.json -c -p -t --all -x \"npm run changelog\""
+    "bump": "bumpp package.json -c --no-push -t --all -x \"npm run changelog\""
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -49,14 +48,11 @@
     "@minko-fe/tsconfig": "^2.1.0",
     "bumpp": "^9.4.1",
     "conventional-changelog-cli": "^5.0.0",
-    "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
-    "npm-run-all": "^4.1.5",
     "simple-git-hooks": "^2.11.1",
     "taze": "^0.13.8",
     "tsup": "^8.1.0",
-    "typescript": "^5.5.2",
-    "vite": "^5.3.1"
+    "typescript": "^5.5.2"
   },
   "simple-git-hooks": {
     "commit-msg": "npm run commitlint",
