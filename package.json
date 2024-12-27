@@ -38,21 +38,21 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "tailwind-merge": "^2.3.0"
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
-    "@minko-fe/commitlint-config": "^2.0.7",
-    "@minko-fe/eslint-config": "^3.2.0",
-    "@minko-fe/prettier-config": "^2.2.2",
-    "@minko-fe/tsconfig": "^2.1.0",
-    "bumpp": "^9.4.1",
+    "@commitlint/cli": "^19.6.1",
+    "@minko-fe/commitlint-config": "^2.1.2",
+    "@minko-fe/eslint-config": "^4.1.1",
+    "@minko-fe/prettier-config": "^2.2.3",
+    "@minko-fe/tsconfig": "^2.1.1",
+    "bumpp": "^9.9.2",
     "conventional-changelog-cli": "^5.0.0",
-    "eslint": "^8.57.0",
+    "eslint": "^8.57.1",
     "simple-git-hooks": "^2.11.1",
-    "taze": "^0.13.8",
-    "tsup": "^8.1.0",
-    "typescript": "^5.5.2"
+    "taze": "^0.18.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
   },
   "simple-git-hooks": {
     "commit-msg": "npm run commitlint",

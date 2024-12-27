@@ -3,7 +3,7 @@
 ## Usage
 
 ```tsx
-import { classnames } from 'tw-clsx'
+import { classNames } from 'tw-clsx'
 
-classnames('text-center', 'text-2xl', 'text-xl')
+classNames('text-center', 'text-2xl', 'text-xl') // ===> 'text-center text-xl'
 ```
